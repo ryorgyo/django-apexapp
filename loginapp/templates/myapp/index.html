@@ -1,0 +1,22 @@
+{% extends './layout.html' %} {%block body%}
+<div class="py-12 px-0 flex flex-col items-center">
+  <h2 class="text-4xl text-center w-max mb-16">{{title}}</h2>
+  <div>
+    <form action="" class="flex flex-col">
+      {% csrf_token %} {{ form.as_table }}
+      <button class="bg-black text-white w-80 h-20 text-4xl mb-2">
+        {{button_text}}
+      </button>
+      {%if a_boo%}
+      <a href="" class="block text-center">パスワードをお忘れですか？</a>
+      {%endif%}
+      <a
+        class="w-80 h-20 text-4xl border-solid border-black border-4 mt-2 py-4 text-center"
+        href="{%url a_href%}"
+      >
+        {{a_text}}
+      </a>
+    </form>
+  </div>
+</div>
+{%endblock%}

@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    {% comment %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/style.min.css' %}"
+    />
+    {% endcomment %}
+    <title>えぺふれんず</title>
+  </head>
+  <body class="box-border m-0 p-0 w-full font-bold">
+    <header class="bg-black flex py-5 items-end">
+      <h1 class="text-white text-4xl">ロゴ</h1>
+      <nav class="text-white text-4xl ml-10">
+        <a href="">概要</a>
+        <a href="">魅力</a>
+        <a href="">使い方</a>
+        <a href="">問い合わせ</a>
+      </nav>
+      {% comment %}
+      <div class="float-right">
+        {% endcomment %}
+        <a
+          href=""
+          class="text-white text-4xl ml-auto border-4 border-white border-solid p-4"
+          >ログインはこちら</a
+        >
+        {% comment %}
+      </div>
+      {% endcomment %}
+    </header>
+    {% block body %} {% endblock %}
+    <footer class="bg-black">
+      <div class="flex justify-between px-64 pt-14 pb-7">
+        <nav class="text-white">
+          <a href="" class="block">text text text text</a
+          ><a href="" class="block">text text text text</a
+          ><a href="" class="block">text text text text</a
+          ><a href="" class="block">text text text text</a>
+        </nav>
+        <button class="text-white">お問い合わせ</button>
+      </div>
+      <small class="text-white w-max block mx-auto">&copy;2023 ryorgyo</small>
+    </footer>
+  </body>
+</html>
